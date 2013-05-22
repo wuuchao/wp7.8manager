@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using 背单词对战.Resources;
+using 背单词对战.model;
 
 namespace 背单词对战
 {
@@ -17,14 +18,17 @@ namespace 背单词对战
         public MainPage()
         {
             InitializeComponent();
-
+            words w = new words();
+            w.add("ambulance", "救护车");
+            w.add("seal", "海豹");
             // 用于本地化 ApplicationBar 的示例代码
             //BuildLocalizedApplicationBar();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("/view/setLimit.xaml", UriKind.Relative));
+
+            this.NavigationService.Navigate(new Uri("/listWords/cet4.xaml", UriKind.Relative));
         }
 
         // 用于生成本地化 ApplicationBar 的示例代码
